@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Productos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Lista de Productos</h1>
+    <a href="registrar.php">Registrar Producto</a>
+    <h1></h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Categoría</th>
+                <th>Estado</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody id="tabla-productos">
+            <!-- Los datos se cargarán dinámicamente desde el archivo PHP -->
+        </tbody>
+    </table>
+
+    <script>
+        // Cargar los productos usando AJAX
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('cargar_productos.php')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('tabla-productos').innerHTML = data;
+                })
+                .catch(error => console.error('Error al cargar los productos:', error));
+        });
+
+        // Confirmación de eliminación
+        function confirmarEliminacion(id) {
+            if (confirm("¿Estás seguro de que deseas eliminar este producto?")) {
+                window.location.href = `cargar_productos.php?eliminar_id=${id}`;
+            }
+        }
+    </script>
+</body>
+</html>

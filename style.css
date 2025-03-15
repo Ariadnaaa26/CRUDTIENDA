@@ -1,0 +1,59 @@
+body {
+    background-color: #f8ddea; /* Rosa claro para el fondo */
+    font-family: Arial, sans-serif;
+    color: #5a1a57; /* Texto en tono rosa oscuro */
+    text-align: center;
+}
+
+h1 {
+    color: #800000;/* Magenta intenso */
+}
+
+a {
+    background-color: #ff69b4; 
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #63143c; /* Rosa pastel */
+    text-decoration: none;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #ffffff; /* Fondo rosa suave */
+    border: 2px solid #ff69b4; /* Borde rosa claro */
+}
+
+th, td {
+    border: 1px solid #ff69b4; /* Bordes en tono rosa pastel */
+    padding: 10px;
+}
+
+th {
+    background-color: #fc3fa4; /* Rosa fuerte para encabezados */
+    color: #fff; /* Texto blanco */
+}
+
+td img {
+    border-radius: 8px;
+}
+
+td a {
+    background-color: #ff69b4; 
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+}
+
+td a:hover {
+    background-color: #ea2d8b;
+    color: #fff;
+    text-decoration: none;
+}
